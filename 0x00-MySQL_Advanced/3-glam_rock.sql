@@ -1,3 +1,4 @@
+-- create table with unique index
 SELECT 
     band_name, 
     (CASE 

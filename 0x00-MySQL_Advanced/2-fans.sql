@@ -1,3 +1,4 @@
+-- create table with unique index
 SELECT 
     origin, 
     SUM(fans) AS nb_fans
