@@ -3,10 +3,10 @@
 """
 
 
-def func():
+def update_topics(mongo_collection, name, topics):
     """function to do the module work
     """
-    pass
+    mongo_collection.update_many({ "name": name}, {"$set": {"topics": topics}})
 
 
 if __name__ == '__main__':
