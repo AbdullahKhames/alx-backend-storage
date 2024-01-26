@@ -3,10 +3,17 @@
 """
 
 
-def func():
-    """function to do the module work
+def top_students(mongo_collection):
     """
-    pass
+    returns all students sorted by average score
+    """
+    return mongo_collection.aggregate([
+        {'$project': {
+            'name': 1,
+            'averageScore': {'$avg': '$topics.score'}
+        }},
+        {'$sort': {'averageScore': -1}}
+    ])
 
 
 if __name__ == '__main__':
