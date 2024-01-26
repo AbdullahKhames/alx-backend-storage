@@ -1,4 +1,4 @@
 // script to update all school documents
-db.school.updateMany( { name: "Holberton school" }, { $set: 
+db.school.update( { name: "Holberton school" }, { $set: 
       {address:  "972 Mission street"}
 })
