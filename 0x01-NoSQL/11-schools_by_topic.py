@@ -3,10 +3,10 @@
 """
 
 
-def func():
+def schools_by_topic(mongo_collection, topic):
     """function to do the module work
     """
-    pass
+    return mongo_collection.find( { "topics": topic } )
 
 
 if __name__ == '__main__':
